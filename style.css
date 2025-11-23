@@ -241,36 +241,24 @@ footer {
     color: var(--white);
     margin-top: 50px;
 }
-
 /* --- Responsif (Mobile) --- */
 @media (max-width: 992px) {
-    
-    /* ... kode lain sebelumnya ... */
-
-    .hero-image {
-        width: 280px;  /* Kita set ukuran pasti agar tidak melebar */
-        height: 280px; /* Tinggi HARUS sama dengan lebar */
-        
-        /* SOLUSI UTAMA: Agar gambar tidak gepeng */
-        object-fit: cover; 
-        
-        /* SOLUSI KEDUA: Agar gambar tidak dipaksa mengecil oleh teks */
-        flex-shrink: 0; 
-        
-        margin-top: 30px; /* Memberi jarak antara tombol dan foto */
-        
-        /* Pastikan border-radius tetap ada */
-        border-radius: 35% 65% 65% 35% / 35% 45% 55% 45%;
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
     }
-
-    /* Tambahan: Agar container bisa discroll jika teks kepanjangan */
-    .hero-section {
-        min-height: 100vh; /* Gunakan min-height, bukan height biasa */
-        height: auto;      /* Biarkan tinggi menyesuaikan isi konten */
-        padding-top: 100px; /* Jarak dari atas */
-        padding-bottom: 50px; /* Jarak dari bawah */
+    .hero-image-container {
+        margin-bottom: 50px;
     }
-}
+    .hero-text {
+        padding-left: 0;
+    }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-text h2 { font-size: 2rem; justify-content: center; }
+    .hero-text p { margin: 0 auto 30px; }
+    .image-blob, .hero-image {
+        width: 300px; height: 300px;
+    }
     
     .burger-menu { display: block; }
     .nav-links {
@@ -393,4 +381,5 @@ footer {
     transform: translateY(0); /* Kembali ke posisi normal */
     opacity: 1; /* Terlihat jelas */
 }
+
 
